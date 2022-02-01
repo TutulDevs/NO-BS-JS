@@ -41,7 +41,7 @@ typeof true; // Boolean
 
 _Number_ type contains numeric values. **JS** uses a fixed number of bits, 64 only, to store a single number. It means that how different peices of number can be represented is limited. With these much bits, you can create about 18 quintillion (an 18 with 18 zeros after it) different numbers.
 
-👉 [See more](./1_number.md)
+👉 [Learn More about Number](./1_number.md)
 
 ## Resources
 

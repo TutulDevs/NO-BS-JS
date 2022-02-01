@@ -45,6 +45,9 @@ It's called _remainder_. It simply returns the remainder of the division.
 
 **JS** operators have precedence over other operators. [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) has a table of operators with their precedence.
 
+**Coming Later**
+`Infinity`, `NaN`, common math operation, `Number` methods, etc.
+
 ## Resources
 
 - https://eloquentjavascript.net/01_values.html#p_sgNSYKwqbo
