@@ -135,9 +135,85 @@ parseFloat("23s4.34"); // 23
 Number.parseFloat(""); // NaN
 ```
 
----
+👉 **toString()**
 
-To add: toString(), tofixed(), toPrecision(), toLocaleString(), isInteger() , isFinite(), isNaN(), valueOf()
+This method returns a string representation of the given number. It can take an optional argument, usually called `radix`, which is an integer that specifies the base.
+
+```js
+const x = 234.567;
+const y = 12;
+
+x.toString(); // '234.567'
+y.toString(2); // '1100'
+```
+
+👉 **tofixed()**
+
+`tofixed()` method returns a string that represents a fixed number formation using fixed-point notation. It accepts an optional parameter ranges from 0 to 100. The default is 0. Providing a negative parameter will return `Uncaught RangeError` error.
+
+```js
+const x = 234.567;
+const y = 12;
+const z = 234.123;
+
+x.tofixed(2); // '234.56'
+x.toFixed(); // '235'
+z.toFixed(); // '234'
+y.toFixed(2); // '12.00'
+y.toFixed(20); // '12.00000000000000000000'
+```
+
+ℹ Remember that `toFixed()` method returns a string. You'll need to convert that to a number based on your need. Or you can create a helper function.
+
+```js
+const formatNumber = (num, range) => Number(num.toFixed(range));
+
+formatNumber(234.567, 2); // 234.57
+formatNumber(234.567); // 235
+```
+
+👉 **toPrecision()**
+
+It returns a string representing the number to the given precision or length. It accepts an optional parameter that specifies the length of the number. Similar to `toFixed()`, it ranges between 0 to 100.
+
+```js
+const x = 234.567;
+const y = 12;
+
+x.toPrecision(4); // '234.6'
+x.toPrecision(); // '234.567'
+x.toPrecision(9); //'234.567000'
+x.toPrecision(2); // '2.3e+2'
+y.toPrecision(5); // '12.000'
+```
+
+The main difference between `toPrecision()` and `toFixed()` is that the first one returns the digits as lengthy as the parameter and the second one returns digits after the decimal point as lengthy as the parameter.
+
+👉 **toLocaleString()**
+
+This method returns a string with a language-sinsitive representation. It will return the number format in the specified language.
+
+```js
+const x = 123456.789;
+
+x.toLocaleString("en-us"); // '123,456.789' // english US
+x.toLocaleString("en-in"); // '1,23,456.789' // english India
+x.toLocaleString("ar-EG"); // '١٢٣٬٤٥٦٫٧٨٩' // arabic Egypt
+```
+
+A more functional way to produce number format based on country and language is by using **JavaScript**'s in-built `Intl.NumberFormat()` constructor. You can learn more about this in [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) and [this](https://hacks.mozilla.org/2014/12/introducing-the-javascript-internationalization-api/) links.
+
+👉 **isInteger()**
+
+As the name suggests, it checks if the given number is an integer or not.
+
+👉 **isNaN()**
+
+Checks if the given number is `NaN` or not.
+
+👉 **isFinite()**
+
+Checks if the given number is finite or not.
 
 ## Resources
 
