@@ -1,22 +1,23 @@
 ## Number
 
-_Number_ type contains numeric values. **JS** uses a fixed number of bits, 64 only, to store a single number. It means that how different peices of number can be represented is limited. With these much bits, you can create about 18 quintillion (an 18 with 18 zeros after it) different numbers.
+_Number_ type contains numeric values. **JS** uses a fixed number of bits, 64 only, to store a single number. It means that how different pieces of numbers can be represented is limited. With these many bits, you can create about 18 quintillions (an 18 with 18 zeros after it) of different numbers.
 
 A _number_ can be stored as a negative number.
 
-It can be both integer and floating point numbers.
-| Integer | Floating Point |
-| ----------- | ----------- |
-| An integer is a positive or negative whole number, including 0| A floating point number, is a positive or negative whole number with a decimal point |
-| 4, -4, 0 | 0.23, 4.5, -9.87 |
-| Number.isInteger(n) | parseInt(n) === n |
+It can be both integer and floating-point numbers.
 
-_Number_ is also called floating point numbers, because they have decimal even on the integers. So `23` is equal to `23.0`.
+| Integer                                                        | Floating Point                                                                       |
+| -------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| An integer is a positive or negative whole number, including 0 | A floating point number, is a positive or negative whole number with a decimal point |
+| 4, -4, 0                                                       | 0.23, 4.5, -9.87                                                                     |
+| Number.isInteger(n)                                            | parseInt(n) === n                                                                    |
+
+_Number_ is also called floating-point numbers, because they have decimals even on the integers. So `23` is equal to `23.0`.
 
 The main purpose of _Number_ is to calculate. The common operations are multiplication
-`✖`, division `➗`, addition `➕`, subtraction `➖`.
+`✖`, division `➗`, addition `➕` and subtraction `➖`.
 
-Some arithmatic operations 👇
+Some arithmetic operations 👇
 
 ```js
 100 + 4;
@@ -29,7 +30,7 @@ Some arithmatic operations 👇
 
 Now we've two different operations. Will it add 100 with 4 and multiply with 11 ?! Or multiply 11 with 4 and add 100. Confusing, right?
 
-We can wrap certain parts of the numbers in parentheses to seperate, just like general arithmetic.
+We can wrap certain parts of the numbers in parentheses to separate, just like general arithmetic.
 
 ```js
 (100 + 4) * 11;
@@ -48,11 +49,11 @@ It's called _remainder_. It simply returns the remainder of the division.
 
 ### Special Numbers
 
-Beside regular numeric values, **JS** have three special values.
+Besides regular numeric values, **JS** have three special values.
 
-1. Infinity
-2. -Infinity
-3. NaN
+1. `Infinity`
+2. `-Infinity`
+3. `NaN`
 
 The first two represent positive and negative infinities. It's the same as the mathematical _Infinity ∞_. It's bigger than any finite number or smaller than any negative finite number. Any calculation with `Infinity` will return `Infinity`. `Number.isFinite()` is a function to check if a number is finite or not.
 
@@ -66,7 +67,7 @@ The usages of `Infinity` is less than others. One of the real use cases is while
 
 👉 Check Dmitri's [blog post](https://dmitripavlutin.com/infinity-in-javascript/) to know more about `Infinity`.
 
-**NaN** stands for _Not a Number_. Ironic, isn't it? You'll get it when you try to devide zero by zero(0 / 0), `Infinity - Infinity` or any operation that is not meaningful. It is the result of a wrong mathematical operation. Once a variable gets NaN, there's no going back. Whatever you do with NaN, will returns NaN.
+`NaN` stands for _Not a Number_. Ironic, isn't it? You'll get it when you try to divide zero by zero(0 / 0), `Infinity - Infinity` or any operation that is not meaningful. It is the result of a wrong mathematical operation. Once a variable gets `NaN`, there's no going back. Whatever you do with `NaN`, will return `NaN`.
 
 ```js
 0 / 0; // NaN
@@ -80,18 +81,18 @@ NaN * 54;
 "ban" + NaN + "a"; // try this on your console 😉
 ```
 
-We can affirm that, if **JS** can't handle an operation, it doesn't stop or gives you an error, rather it gives you NaN.
+We can affirm that, if **JS** can't handle an operation, it doesn't stop or give you an error, rather it gives you `NaN`.
 
 ### Too Lengthy of a Number to Count
 
-Numbers can get lengthy and hard to count. But don't worry, **JavaScript** got your back. We can use underscore `_` to seperate numbers.
+Numbers can get lengthy and hard to count. But don't worry, **JavaScript** got your back. We can use underscore `_` to separate numbers.
 
 ```js
 const hardToCount = 123456789;
 const easyToCount = 12_34_56_789;
 ```
 
-It makes number more readable and doesn't change the value. **JS** engine ignores the `_` between numbers while compiling.
+It makes numbers more readable and doesn't change the value. **JS** engine ignores the `_` between numbers while compiling.
 
 ### Common Number Methods
 
@@ -99,7 +100,7 @@ It makes number more readable and doesn't change the value. **JS** engine ignore
 
 👉 **Number()**
 
-It's useful to convert a string into a valid number. But make sure the string has only digits and no text. Otherwise it'll return `NaN`.
+It's useful to convert a string into a valid number. But make sure the string has only digits and no text. Otherwise, it'll return `NaN`.
 
 ```js
 Number("876"); // 876
@@ -124,7 +125,7 @@ Number.parseInt(""); // NaN
 
 👉 **parseFloat()**
 
-Similar to the `parseInt()`, it returns the floating point number from a valid string of digits.
+Similar to the `parseInt()`, it returns the floating-point number from a valid string of digits.
 
 It's similar to `Number.parseFloat()`.
 
@@ -149,7 +150,7 @@ y.toString(2); // '1100'
 
 👉 **tofixed()**
 
-`tofixed()` method returns a string that represents a fixed number formation using fixed-point notation. It accepts an optional parameter ranges from 0 to 100. The default is 0. Providing a negative parameter will return `Uncaught RangeError` error.
+`tofixed()` method returns a string that represents a fixed number formation using fixed-point notation. It accepts an optional parameter ranging from 0 to 100. The default is 0. Providing a negative parameter will return the `Uncaught RangeError` error.
 
 ```js
 const x = 234.567;
@@ -191,7 +192,7 @@ The main difference between `toPrecision()` and `toFixed()` is that the first on
 
 👉 **toLocaleString()**
 
-This method returns a string with a language-sinsitive representation. It will return the number format in the specified language.
+This method returns a string with a language-sensitive representation. It will return the number format in the specified language.
 
 ```js
 const x = 123456.789;
@@ -201,7 +202,7 @@ x.toLocaleString("en-in"); // '1,23,456.789' // english India
 x.toLocaleString("ar-EG"); // '١٢٣٬٤٥٦٫٧٨٩' // arabic Egypt
 ```
 
-A more functional way to produce number format based on country and language is by using **JavaScript**'s in-built `Intl.NumberFormat()` constructor. You can learn more about this in [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) and [this](https://hacks.mozilla.org/2014/12/introducing-the-javascript-internationalization-api/) links.
+A more functional way to produce a number format based on country and language is by using **JavaScript**'s in-built `Intl.NumberFormat()` constructor. You can learn more about this in [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) and [this](https://hacks.mozilla.org/2014/12/introducing-the-javascript-internationalization-api/) links.
 
 👉 **isInteger()**
 
