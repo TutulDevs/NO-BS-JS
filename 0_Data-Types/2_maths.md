@@ -1,12 +1,7 @@
-# JavaScript Operators
+# JavaScript in Mathematics
 
-## Arithmetic Operators
+To do mathematics, we need operators. You can learn a great deal about them in [javascript.info](https://javascript.info/operators).
 
-The common JavaScript arithmetic operators are:
+---
 
-1. Addition `+`
-2. Subtraction `-`
-3. Multiplication `*`
-4. Division `/`
-5. Remainder `%`
-6. Exponentiation `**`
+ℹ Project on hold for a couple of weeks.
