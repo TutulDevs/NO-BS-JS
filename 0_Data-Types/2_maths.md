@@ -2,7 +2,7 @@
 
 To do mathematics, we need operators. You can learn a great deal about them in [javascript.info](https://javascript.info/operators).
 
-Maths are important. Everything in modern science and technology. Let's dig into **JavaScript** mathematics.
+Maths are important. Everything in science and technology is based on mathematics. Let's dig into **JavaScript** mathematics.
 
 ## Absolute Value
 
@@ -32,7 +32,7 @@ Math.abs("Ten"); // NaN
 Math.abs(); // NaN
 ```
 
-It can be used to check the number before displaying.
+It can be used to check the number before printing.
 
 ## Math.ceil()
 
@@ -73,9 +73,73 @@ Math.round(-20.5); // -20
 Math.round(-20.51); // -21
 ```
 
+## Math.trunc()
+
+This method returns the integer part of the number by removing any fractional part.
+
+```js
+Math.trunc(13.37); // 13
+Math.trunc(42.84); // 42
+Math.trunc(0.123); //  0
+Math.trunc(-0.123); // -0
+Math.trunc("-1.123"); // -1
+Math.trunc(NaN); // NaN
+Math.trunc("foo"); // NaN
+Math.trunc(); // NaN
+```
+
+## Math.random()
+
+This function returns a floating-point number ranging from 0 to less than 1. It can be scaled with a desired range.
+
+```js
+Math.random(); // 0.6563213011390763
+```
+
+You can round the with the help of `Math.floor()` and scale it by multiplying with desired range.
+
+```js
+const getRandomInteger = (range) => Math.floor(Math.random() * range);
+
+getRandomInteger(3); // 0, 1, 2
+getRandomInteger(101); // 0-100
+```
+
+## Math.max()
+
+This function returns the largest number from the given number parameters. You can pass as many parameters as you want but make sure the parameters are numbers. If any parameter is not a number, it'll return our old friend `NaN`. You can also provide an array of numbers by spreading it with `...` or you can use `Array.reduce()`.
+
+```js
+Math.max(1, 3, 2); // 3
+Math.max(-1, -3, -2); // -1
+Math.max(1, 3, "x"); // NaN
+
+const myArray = [0, 23, 56];
+
+Math.max(...myArray); // 56
+```
+
+## Math.min()
+
+You guessed it right. This method is the opposite of the `Math.max()`. It returns the lowest valued number.
+
+```js
+Math.min(1, 3, 2); // 1
+Math.min(-1, -3, -2); // -3
+Math.min(1, 3, "x"); // NaN
+
+const myArray = [0, 23, 56];
+
+Math.min(...myArray); // 0
+```
+
+This is all for now. There are lots of methods of the `Math` object. For a long time I didn't do any mathematics and forgot the terms. So couldn't move further.
+
 ---
 
 ## References
 
 - https://flexiple.com/javascript-absolute-value
 - https://www.educative.io/edpresso/mathceil-mathfloor-and-mathround-in-javascript
+- https://www.makeuseof.com/javascript-math-methods/
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
