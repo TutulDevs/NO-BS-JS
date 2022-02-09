@@ -34,8 +34,48 @@ Math.abs(); // NaN
 
 It can be used to check the number before displaying.
 
+## Math.ceil()
+
+This function always rounds a number up to the next largest integer. If you give it 3.1, it'll return 4. It takes only one argument.
+
+```js
+Math.ceil(0.95); // 1
+Math.ceil(4); // 4
+Math.ceil(7.004); // 8
+Math.ceil(-0.95); // -0
+Math.ceil(-4); // -4
+Math.ceil(-7.004); // -7
+Math.ceil(null); // 0
+```
+
+## Math.floor()
+
+Opposite to the `Math.ceil()` method, `Math.floor()` returns the largest integer less than or equal to a given number. It also accepts one argument.
+
+```js
+Math.floor(45.95); //  45
+Math.floor(45.05); //  45
+Math.floor(4); //   4
+Math.floor(-45.05); // -46
+Math.floor(-45.95); // -46
+Math.floor(null); // 0
+```
+
+## Math.round()
+
+This method rounds off a number depending on the fractional part of the number. If the fractional part is more than or equal to 0.5, it'll return the next largest integer. If it's less than 0.5, it'll return the same number without the fractional part.
+
+```js
+Math.round(20.49); //  20
+Math.round(20.5); //  21
+Math.round(42); //  42
+Math.round(-20.5); // -20
+Math.round(-20.51); // -21
+```
+
 ---
 
 ## References
 
-- https://flexiple.com/javascript-absolute-value/
+- https://flexiple.com/javascript-absolute-value
+- https://www.educative.io/edpresso/mathceil-mathfloor-and-mathround-in-javascript
