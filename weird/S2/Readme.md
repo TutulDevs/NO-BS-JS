@@ -77,3 +77,9 @@ Scope Chain is the chain of execution contexts to find it's reference to Outer E
 `let` will be `undefined` in the memory during the creation phase but won't be accessible until it's declared. It'll throw a `ReferenceError`. It is also **block scoped**, means, it can't be accessed outside of it's lexical block. A block is the code inside two curly braces.
 
 If you use `let` in a loop, it'll create a new variable in the memory everytime the loop runs.
+
+## 19. What About Asynchronous Callbacks? or Event Loop
+
+When there are any or some events to be handled in the page, the JS engine will first executes all it's normal codes and then will executes the events. Event will be handled only after clearing the global execution context. But the events will be sit in a queue, it's called the `Event Queue`. So when some events happen, it'll check the event queue. The checking in loop is known as the `Event Loop`.
+
+JS does this kind of asynchronous work by the help of it's engine.
