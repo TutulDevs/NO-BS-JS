@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object | Dot</title>
+  </head>
+  <body>
+    <h2>31. Object and the Dot</h2>
+
+    <script type="text/javascript">
+      // create an object in the most basic way
+      var person = new Object();
+
+      person["firstname"] = "John";
+      person["lastname"] = "Doe";
+
+      var firstNameProperty = "firstname";
+
+      console.log(person);
+      console.log(person[firstNameProperty]);
+      // the [ ... ] is an operator, called "Computed Member Access', it has a precedence of 18
+
+      // displaying the object in an easier way
+      console.log(person.lastname);
+      // the . is an operator, called 'Member Access', it has a precedence of 18
+
+      // let add an object property with the help of 'Member Access'
+      // it has 'left-to-right' associativity, so person finds in address, address find in street & so on
+      person.address = new Object();
+      person.address.street = "John Street";
+      person.address.city = "NY";
+
+      console.log(person.address.street);
+      console.log(person["address"]["street"]);
+    </script>
+  </body>
+</html>
