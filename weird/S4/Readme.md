@@ -4,7 +4,7 @@
 
 Object has _name-value_ pairs. Those values can be a) Primitive 'Property', b) Object 'Property' and c) Function 'method'.
 
-Object themselves, their properties, their methods are all just sitting in the memory. The `Dot .` and `[ ... ]` are just functions/ operators, a to access that information.
+Objects themselves, their properties, their methods are all just sitting in the memory. The `Dot .` and `[ ... ]` are just functions/ operators, a to access that information.
 
 [Example](./theDot.html)
 
@@ -41,3 +41,60 @@ So the code you write in a function is placed into a special property of the fun
 [Example](./35.html)
 
 [Additional Resource](https://www.youtube.com/watch?v=zCO3nv7idJw)
+
+## 36. Function Statements and Function Expressions
+
+👉 **Expression**: A unit of code that results in a value. It doesn't have to save to a variable.
+
+**Statement** on the other hand just does the work.
+
+```js
+a = 3; // an expression
+
+if (a === 3) {
+  //...
+} // if is a statement but 'a === 3' is an expression
+```
+
+As functions are objects, we have both Function Expression & Function Statement.
+
+```js
+function greet() {
+    console.log('Hello);
+}
+```
+
+This is a statement because it doesn't return any value untill the function is executed.
+
+```js
+var anonymousGreet = function () {
+  console.log("Hello");
+};
+```
+
+This is an expression binded to a variable. Since, functions are objects, we binded an object to the `anonymousGreet` variable.
+
+When we create a function expression and pointed it to a variable then an object is created on the fly. When a function is written as a statement, it does nothing. It means the JS engine does nothing.
+
+We can't declare the `anonymousGreet` before assigning the function expression. Because it's a variable, it's `undefined` initially and we cannot expect a function expression from `undefined`.
+
+[Example](./36.html)
+
+## 37. Conceptual Aside: By Value vs By Reference
+
+For primitives, when you declare a new variable to an old variable, the new variable creates a new place in memory and copies the value of the old variable.
+
+```js
+var a = "hello"; // an address is created for the variable
+var b = a; // a new address is created and copied the value of the a variable
+
+console.log(a); // 'hello'
+console.log(b); // 'hello'
+
+a = "world";
+
+console.log(a); // 'world' a is changed but didn't change b
+console.log(b); // 'hello' b remains intact in the same place in memory
+```
+
+// add more
