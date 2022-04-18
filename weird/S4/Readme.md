@@ -80,7 +80,7 @@ We can't declare the `anonymousGreet` before assigning the function expression. 
 
 [Example](./36.html)
 
-## 37. Conceptual Aside: By Value vs By Reference
+## 37. Conceptual Aside: By Value VS By Reference
 
 For primitives, when you declare a new variable to an old variable, the new variable creates a new place in memory and copies the value of the old variable.
 
@@ -97,4 +97,22 @@ console.log(a); // 'world' a is changed but didn't change b
 console.log(b); // 'hello' b remains intact in the same place in memory
 ```
 
-// add more
+When you create an object, it's value gets a location in the memory. When you create another variable and assign a previously created object, the new variable doesn't get a new location in memory, rather it gets the exact location as the assigned object.
+
+```js
+const obj1 = { name: "John", age: 25 };
+
+const obj2 = obj1;
+
+obj1.name = "Mark";
+
+console.log(obj2); // {name: 'Mark', age: 25}
+
+obj2.age = 22;
+
+console.log(obj1); // {name: 'Mark', age: 22}
+```
+
+## 38. Objects, Functions, and `this`
+
+[Example](./38.html)
