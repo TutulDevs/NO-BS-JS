@@ -128,3 +128,74 @@ A common way to fix this by assigning `this` to a new variable. So the new varia
 👉 The arrow functions don't have `this` variable. It will always point to the global object.
 
 [Example](./38.html)
+
+## 39. Conceptual Aside: Arrays - Collections of Anything
+
+If you create a function as an element of an array and try to log the `this`, you'll get the whole array.
+
+```js
+var arr = [
+  1,
+  false,
+  { name: "John" },
+  function () {
+    console.log(this);
+  },
+];
+
+arr[3](); // the whole arr
+```
+
+## 40. 'arguments' and spread
+
+We know that we can create a function statement with parameters and invoke it with no arguments. JavaScript engine will not stop working. It will set the value of the parameters during creation phase. It will be set as `undefined`. Previously we could've set an alternative value if the argument is not passed by an `||` operator.
+
+In modern JavaScript, we have default parameter. It means we can assign a default value for a parameter.
+
+```js
+function a(name) {
+  console.log(name);
+}
+a(); // undefined
+
+function b(name) {
+  b = b || "John";
+  console.log(name);
+}
+b(); // John
+
+function c(name = "Jane") {
+  console.log(name);
+}
+c(); // Jane
+```
+
+A function statement also gives us a hidden variable, `arguments`. It is an array look-like collection of data where all our passed arguments are listed. It looks like an array, has many methods of an array but it's not an array. This can be useful in some cases. BTW, you don't get the `arguments` in an arrow function.
+
+```js
+function a(name) {
+  console.log(arguments);
+}
+a("John"); // ['John']
+
+function b(name) {
+  console.log(arguments);
+}
+b(); // []
+```
+
+In some cases `arguments` are good but it has been deprecated. We can use it but there is a better alternative. It's called **spread/ rest parameter**. It basically lists all the parameters that has not been set but passes as arguments.
+
+```js
+function a(fname, lname, ...others) {
+  console.log(others);
+}
+
+a("John", "Doe", 37, "NY"); // [37, 'NY']
+
+function nums(...n) {
+  console.log(n);
+}
+
+nums(3, 5, 7, 9); // [3, 5, 7, 9]
+```
