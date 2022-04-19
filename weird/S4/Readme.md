@@ -115,4 +115,16 @@ console.log(obj1); // {name: 'Mark', age: 22}
 
 ## 38. Objects, Functions, and `this`
 
+When a function is invoked, it gives us a special variable `this` without doing anything. The `this` behaves differently depends on the way it's function is invoked. If you call it in a function by function statement or function expression, it points to the Global object.
+
+When a function is created as a method in an object, the `this` inside the method will point to the whole object it was created in.
+
+🐞 A behaviour of the `this` in method that is a bug according to many engineers.
+
+If you create a function inside of a method and try to use the `this`, you'll notice that the `this` in the function refers to the Global object.Weird!
+
+A common way to fix this by assigning `this` to a new variable. So the new variable will always refers to the `this` and you can use it thoroughly.
+
+👉 The arrow functions don't have `this` variable. It will always point to the global object.
+
 [Example](./38.html)
