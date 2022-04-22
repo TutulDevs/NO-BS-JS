@@ -83,3 +83,6 @@ If you use `let` in a loop, it'll create a new variable in the memory everytime 
 When there are any or some events to be handled in the page, the JS engine will first executes all it's normal codes and then will executes the events. Event will be handled only after clearing the global execution context. But the events will be sit in a queue, it's called the `Event Queue`. So when some events happen, it'll check the event queue. The checking in loop is known as the `Event Loop`.
 
 JS does this kind of asynchronous work by the help of it's engine.
+
+[All Examples](./B3.js)
+[All Examples](./Functions.js)

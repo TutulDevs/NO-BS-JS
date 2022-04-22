@@ -6,13 +6,13 @@ Object has _name-value_ pairs. Those values can be a) Primitive 'Property', b) O
 
 Objects themselves, their properties, their methods are all just sitting in the memory. The `Dot .` and `[ ... ]` are just functions/ operators, a to access that information.
 
-[Example](./theDot.html)
+[Example](./theDot.js)
 
 ## 32. Object and Object Literals
 
 Object Literal is just the `{ ... }`. They are the shorthand for `new Object()`. The `{}` is a shorthand but not an operator. So how does it create an object? Well, out JavaScript engine, while parsing if sees any `{}` that is not in a loop or in any `if` statement, it assumes you're creating an object.
 
-[Example](./objectLiteral.html)
+[Example](./objectLiteral.js)
 
 ## 34. JSON and JS Literal
 
@@ -38,7 +38,7 @@ The Function object has some hidden properties. Two important ones are:
 
 So the code you write in a function is placed into a special property of the function object. So the code you write is the function, the function is an object of other properties. And the code you write is one of the properties you add on to it. What special of this property is that you can invoke the property.
 
-[Example](./35.html)
+[Example](./35.js)
 
 [Additional Resource](https://www.youtube.com/watch?v=zCO3nv7idJw)
 
@@ -78,7 +78,7 @@ When we create a function expression and pointed it to a variable then an object
 
 We can't declare the `anonymousGreet` before assigning the function expression. Because it's a variable, it's `undefined` initially and we cannot expect a function expression from `undefined`.
 
-[Example](./36.html)
+[Example](./36.js)
 
 ## 37. Conceptual Aside: By Value VS By Reference
 
@@ -127,7 +127,7 @@ A common way to fix this by assigning `this` to a new variable. So the new varia
 
 👉 The arrow functions don't have `this` variable. It will always point to the global object.
 
-[Example](./38.html)
+[Example](./38.js)
 
 ## 39. Conceptual Aside: Arrays - Collections of Anything
 
@@ -199,3 +199,11 @@ function nums(...n) {
 
 nums(3, 5, 7, 9); // [3, 5, 7, 9]
 ```
+
+## 41. Framework Aside: Function Overloading
+
+In many other programming languages, we can use the same named function which receives different parameters and return accordingly.
+
+In JavaScript, we don't have that facility. Because functions work here differently. So we need to bypass the method of function overloading. We can create different functions and invoke another main function inside it.
+
+[Example](./41.js)

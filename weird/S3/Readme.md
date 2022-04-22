@@ -64,3 +64,5 @@ Boolean([]); // true
 ## 28. Existence and Boolean
 
 👉 check the Q&A section of the lesson.
+
+[Example](./Operators.js)
