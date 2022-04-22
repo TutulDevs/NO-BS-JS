@@ -207,3 +207,29 @@ In many other programming languages, we can use the same named function which re
 In JavaScript, we don't have that facility. Because functions work here differently. So we need to bypass the method of function overloading. We can create different functions and invoke another main function inside it.
 
 [Example](./41.js)
+
+## 42. Conceptual Aside: Syntax Parsers
+
+The JavaScript engine reads your code character by character and check the validity of the written code. It always expect another character right to it's place. If it found anything invalid, it throws an error. It may even **make changes** to the written code. It all happens before the code execution.
+
+## 43. Dangerous Aside: Automatic Semicolon Insertion
+
+No programming language is prefect. So is JavaScript. When the syntax parser reads your code character by character, it makes some decision based on your written code.
+
+```js
+function a() {
+  return
+  {
+    name: 'John',
+  }
+}
+
+a(); // undefined
+
+```
+
+The reason the result is undefined is that, when we press the `enter` key from the keyboard after the `return` statement, the syntax parser added a `;` for us. It thought that maybe that was the end of the statement.
+
+We know that semicolon is optional in JavaScript but it is for a reaon. The syntax parser automatically adds a semicolon for you when it expects a semicolon in your code. Remember '**make changes**'.
+
+So you should always put your semicolons otherwise the syntax parser will add for you and you may won't like it sometimes. Formatter like, [Prettier](https://prettier.io/) makes you code formatted but check the semicolons when you see a problem.
