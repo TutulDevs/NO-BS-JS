@@ -214,7 +214,7 @@ The JavaScript engine reads your code character by character and check the valid
 
 ## 43. Dangerous Aside: Automatic Semicolon Insertion
 
-No programming language is prefect. So is JavaScript. When the syntax parser reads your code character by character, it makes some decision based on your written code.
+No programming language is perfect. So is JavaScript. When the syntax parser reads your code character by character, it makes some decisions based on your written code.
 
 ```js
 function a() {
@@ -230,6 +230,70 @@ a(); // undefined
 
 The reason the result is undefined is that, when we press the `enter` key from the keyboard after the `return` statement, the syntax parser added a `;` for us. It thought that maybe that was the end of the statement.
 
-We know that semicolon is optional in JavaScript but it is for a reaon. The syntax parser automatically adds a semicolon for you when it expects a semicolon in your code. Remember '**make changes**'.
+We know that semicolon is optional in JavaScript but it is for a reason. The syntax parser automatically adds a semicolon for you when it expects a semicolon in your code. Remember '**make changes**'.
 
-So you should always put your semicolons otherwise the syntax parser will add for you and you may won't like it sometimes. Formatter like, [Prettier](https://prettier.io/) makes you code formatted but check the semicolons when you see a problem.
+So you should always put your semicolons otherwise the syntax parser will add for you and you may not like it sometimes. Formatter like, [Prettier](https://prettier.io/) makes you code formatted but check the semicolons when you see a problem.
+
+## 45. Immediately Invoked Functions Expressions (IIFEs)
+
+We know that there are two kinds of functions in JavaScript.
+
+- Function Statement
+- Function Expression
+
+They do their work as usual. But there are other things that make functions first class object.
+
+We know the code property, the hidden property in a function object. It holds the written code. We can invoke that code on the fly, meaning we can invoke a function expression just after creating it. We can just add `()` after the function object to invoke it. We know `()` invokes a function. Here it invokes immediately after the creation.
+
+We can write any expression in our code and it will not throw any error if the expression is valid.
+
+```js
+console.log("hello");
+
+3;
+
+("I am an expression");
+
+{
+  name: "Jenny";
+}
+```
+
+None of the above examples will throw an error because they are valid. However, if we try to execute a function expression on the fly, we'll get an error.
+
+```js
+function(name) {
+  return 'Hello ' + name;
+}
+```
+
+When the syntax parser reads the code it'll find that after the `function` keyword there is no name. It expects a function statement and throws the error. If we just put `function`, it's not a function.
+
+There are few ways to trick the parser to write a function expression on the fly. We need to make sure that the word `function` is not the thing it sees first. The most common way to to do it buy wrapping the function expression by parentheses.
+
+```js
+(function (name) {
+  return "Hello " + name;
+});
+```
+
+Parentheses in JavaScript are operators and we only use parentheses with expressions. Like, `(3 +4)*2`.
+
+👉 Parentheses are grouping operators and only excepts expressions. No statement is allowed.
+
+**Why IIFE?**
+
+IIFE creates a local scope and avoids the global scope. The function expression is not being assigned in the global object.
+
+It doesn't create a global scope so during the execution phase it won't need to look for it's upper scopes.
+
+[Example](./45.js)
+
+- https://flaviocopes.com/javascript-iife/
+- http://gregfranko.com/blog/i-love-my-iife/
+
+## 46. Framework Aside: IIFEs and Safe Code
+
+In **IIFE** the variables don't get mixed up with the global variables. It remains in its own scope. However, if we want to use any global variable inside of an IIFE, just pass it by parameter, since functions are just objects. 
+
+[Example](./46.js)
