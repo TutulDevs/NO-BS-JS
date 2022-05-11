@@ -289,11 +289,25 @@ It doesn't create a global scope so during the execution phase it won't need to 
 
 [Example](./45.js)
 
-- https://flaviocopes.com/javascript-iife/
-- http://gregfranko.com/blog/i-love-my-iife/
+- https://flaviocopes.com/javascript-iife
+- http://gregfranko.com/blog/i-love-my-iife
 
 ## 46. Framework Aside: IIFEs and Safe Code
 
-In **IIFE** the variables don't get mixed up with the global variables. It remains in its own scope. However, if we want to use any global variable inside of an IIFE, just pass it by parameter, since functions are just objects. 
+In **IIFE** the variables don't get mixed up with the global variables. It remains in its own scope. However, if we want to use any global variable inside of an IIFE, just pass it by parameter, since functions are just objects.
 
 [Example](./46.js)
+
+## 47. Understanding Closures
+
+Closures is a JavaScript feature that is among the most important features. Briefly, a closure means that a function has access to the variables lexically outside of it.
+
+Technically in Javascript all functions are closures. A function sitting on the global scope has access lexically along the scope chain to the values on the global object, which forms a closure.
+
+The `v8` creates an object for closure variables called `context`, and puts it on the heap. Not the stack.
+
+More on the examples.
+
+[Example](./47.js)
+
+- [Javascript Closure tutorial ( Closures Explained )](https://www.youtube.com/watch?v=71AtaJpJHw0&ab_channel=techsith)
