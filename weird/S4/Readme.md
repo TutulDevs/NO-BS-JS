@@ -298,7 +298,7 @@ In **IIFE** the variables don't get mixed up with the global variables. It remai
 
 [Example](./46.js)
 
-## 47. Understanding Closures
+## 47. Understanding Closures - 1
 
 Closures is a JavaScript feature that is among the most important features. Briefly, a closure means that a function has access to the variables lexically outside of it.
 
@@ -311,3 +311,7 @@ More on the examples.
 [Example](./47.js)
 
 - [Javascript Closure tutorial ( Closures Explained )](https://www.youtube.com/watch?v=71AtaJpJHw0&ab_channel=techsith)
+
+## 48. Understanding Closures - 2
+
+[Example](./48.js)
