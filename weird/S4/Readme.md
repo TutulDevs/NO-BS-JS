@@ -314,4 +314,19 @@ More on the examples.
 
 ## 48. Understanding Closures - 2
 
+Modern JavaScript engine like `v8` uses **Mark-and-Sweep: Garbage Collection Algorithm**. It means the garbage collector will not sweep any variable until it is referenced by something.
+
 [Example](./48.js)
+
+## 49. Framework Aside: Function Factories
+
+Let's take a look how can we use the benefit of closure functions.
+
+Some advantages of Closure:
+
+1. Less parameters being passed to function calls yields fewer bugs. Long parameter lists make for easier syntax errors or accidentally passing the wrong value in the wrong spot.
+2. More readable code, as you can create functions with more explicit names without rewriting logic or nesting functions.
+3. Code is more easily debugged as you have a central point of logic, rather than many nested function calls where logic is encapsulated somewhere in the hierarchy.
+4. Shrinks the download size of your final Javascript files if calling the functions often (less parameters, less characters typed in the final Javascript file).
+
+[Example](./49.js)
