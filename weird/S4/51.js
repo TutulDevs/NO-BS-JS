@@ -90,11 +90,14 @@ console.log(borrowed); // Jane Doe
 // but while creating a new copy from a function we can pass default value
 // it will work kind of like default parameter but it is permanent
 function multiply(a, b) {
+  console.log(this);
   return a * b;
 }
 
 var mutlipleByTwo = multiply.bind(this, 2);
 // here the 2 is the value of a from multiply
+// since the two functions are in the same scope,
+// the this is referring to the global object
 
 console.log(mutlipleByTwo(4));
 // 2 * 4 = 8

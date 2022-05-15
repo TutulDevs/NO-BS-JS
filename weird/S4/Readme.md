@@ -366,3 +366,9 @@ It is almost same as `.call()` except that it takes arguments as an `Array`.
 [Example](./51.js)
 
 - [bound mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
+
+## 52. Functional Programming
+
+One of the best features of JS is the use of first-class functions. Many popular programming languages do not have this. It gives some flexibility in our code. It is also called the future of JavaScript programming.
+
+[Example](./52.js)
