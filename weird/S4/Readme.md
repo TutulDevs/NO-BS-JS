@@ -330,3 +330,15 @@ Some advantages of Closure:
 4. Shrinks the download size of your final Javascript files if calling the functions often (less parameters, less characters typed in the final Javascript file).
 
 [Example](./49.js)
+
+## 50. Closures and Callbacks
+
+**Callback Function**: A function you give to another function, to be run/ invoke when the other function is finished.
+
+Simply put, callback is passing a function (_a_) as an argument to a function(_b_). When _b_ finishes it's works, it'll call _a_.
+
+[Example](./50.js)
+
+## 51. call(), apply(), and bind()
+
+[Example](./51.js)
