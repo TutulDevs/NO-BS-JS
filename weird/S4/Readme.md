@@ -289,8 +289,8 @@ It doesn't create a global scope so during the execution phase it won't need to 
 
 [Example](./45.js)
 
-- https://flaviocopes.com/javascript-iife
-- http://gregfranko.com/blog/i-love-my-iife
+- [https://flaviocopes.com/javascript-iife](https://flaviocopes.com/javascript-iife)
+- [http://gregfranko.com/blog/i-love-my-iife](http://gregfranko.com/blog/i-love-my-iife)
 
 ## 46. Framework Aside: IIFEs and Safe Code
 
@@ -341,4 +341,28 @@ Simply put, callback is passing a function (_a_) as an argument to a function(_b
 
 ## 51. call(), apply(), and bind()
 
+We know that the function is a special kind of object. It has several properties, like, `name`, which is optional and `code` which is invocable.
+
+Like `Objects` functions get methods. It gets three methods which are all related to the `this` variable.
+
+- `.call()`
+- `.apply()`
+- `.bind()`
+
+### `.bind()`
+
+The `.bind()` function creates a new **bound function** that wraps the original function object. The simplest use of this function is to make a function that, no matter how it is called, is called with a particular `this` value.
+
+### `.call()`
+
+While `bind()` binds the object to the function, `.call()` calls/ executes the function.
+
+### `.apply()`
+
+It is almost same as `.call()` except that it takes arguments as an `Array`.
+
+👉 **Function Currying**: creating a copy of a function but with some preset parameters. Useful in mathematical situations.
+
 [Example](./51.js)
+
+- [bound mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
