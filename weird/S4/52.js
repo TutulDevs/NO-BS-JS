@@ -45,3 +45,13 @@ var checkPastLimitSimplified = function (limit) {
 
 var arr7 = mapForEach(arr1, checkPastLimitSimplified(1));
 console.log(arr7);
+
+// more simplified
+var checkPastLimitSimplifiedMore = function (limit) {
+  return function (item) {
+    return item > limit;
+  };
+};
+
+var arr8 = mapForEach(arr1, checkPastLimitSimplifiedMore(1));
+console.log(arr8);

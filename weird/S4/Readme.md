@@ -372,3 +372,14 @@ It is almost same as `.call()` except that it takes arguments as an `Array`.
 One of the best features of JS is the use of first-class functions. Many popular programming languages do not have this. It gives some flexibility in our code. It is also called the future of JavaScript programming.
 
 [Example](./52.js)
+
+- [Learning Functional Programming with JavaScript - Anjana Vakil - JSUnconf](https://www.youtube.com/watch?v=e-5obm1G_FY&ab_channel=JSConf)
+- [Functional-Light JavaScript](https://github.com/getify/Functional-Light-JS)
+
+## 53. Functional Programming - Part 2
+
+Check the [Annotated Source](https://underscorejs.org/docs/underscore-esm.html) from [underscorejs](https://underscorejs.org/). It uses many utility functions around JavaScript Functional Programming and has the code with comments for developers to read.
+
+You can also check [Lodash](https://lodash.com/).
+
+[Example](./53.html)
