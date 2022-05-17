@@ -10,7 +10,7 @@ Objects themselves, their properties, their methods are all just sitting in the 
 
 ## 32. Object and Object Literals
 
-Object Literal is just the `{ ... }`. They are the shorthand for `new Object()`. The `{}` is a shorthand but not an operator. So how does it create an object? Well, out JavaScript engine, while parsing if sees any `{}` that is not in a loop or in any `if` statement, it assumes you're creating an object.
+Object Literal is just the `{ ... }`. They are the shorthand for `new Object()`. The `{}` is a shorthand but not an operator. So how does it create an object? Well, our JavaScript engine, while parsing if sees any `{}` that is not in a loop or in any `if` statement, it assumes you're creating an object.
 
 [Example](./objectLiteral.js)
 
@@ -46,7 +46,7 @@ So the code you write in a function is placed into a special property of the fun
 
 👉 **Expression**: A unit of code that results in a value. It doesn't have to save to a variable.
 
-**Statement** on the other hand just does the work.
+**Statement**, on the other hand just does the work.
 
 ```js
 a = 3; // an expression
@@ -64,7 +64,7 @@ function greet() {
 }
 ```
 
-This is a statement because it doesn't return any value untill the function is executed.
+👆 This is a statement because it doesn't return any value untill the function is executed.
 
 ```js
 var anonymousGreet = function () {
@@ -72,9 +72,9 @@ var anonymousGreet = function () {
 };
 ```
 
-This is an expression binded to a variable. Since, functions are objects, we binded an object to the `anonymousGreet` variable.
+👆 This is an expression binded to a variable. Since, functions are objects, we binded an object to the `anonymousGreet` variable.
 
-When we create a function expression and pointed it to a variable then an object is created on the fly. When a function is written as a statement, it does nothing. It means the JS engine does nothing.
+When we create a function expression and point it to a variable, an object is created on the fly. When a function is written as a statement, it does nothing. It means the JS engine does nothing.
 
 We can't declare the `anonymousGreet` before assigning the function expression. Because it's a variable, it's `undefined` initially and we cannot expect a function expression from `undefined`.
 
