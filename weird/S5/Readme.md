@@ -46,3 +46,9 @@ Also remember that `.prototype` and `.__proto__` are different. There is a disti
 - [`Object.prototype.__proto__`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 
 ## 56. Everything is an Object (or a primitive)
+
+We know that everything in JavaScript is `Object`, excepts the primitives.
+
+Let's see in the code.
+
+[Example](./56.js)
