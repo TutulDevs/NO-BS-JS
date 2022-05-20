@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>57. Reflection and Extend</title>
+  </head>
+  <body>
+    <h1>57. Reflection and Extend</h1>
+    <h3>ft. UnderscoreJS</h3>
+
+    <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.3/underscore-umd-min.js"></script>
+    <script>
+      var person = {
+        fname: "f_name",
+        lname: "l_name",
+        getFullName: function () {
+          return this.fname + " " + this.lname;
+        },
+      };
+
+      var john = {
+        fname: "John",
+        lname: "Doe",
+      };
+
+      // FOR DEMONSTRATION PURPOSE ONLY
+      // DON'T USE IT ON REAL LIFE
+      john.__proto__ = person;
+
+      // example of Reflection
+      // loop over the object
+      // the prop is the property or key
+      for (var prop in john) {
+        console.log(prop + ": " + john[prop]);
+      }
+
+      // we can check the object conditionally
+      // if the property is its own
+      for (var prop in john) {
+        if (john.hasOwnProperty(prop)) {
+          console.log(prop + ": " + john[prop]);
+        }
+      }
+
+      var jane = {
+        address: "111, NY",
+        getFormalFullName: function () {
+          return this.fname + " " + this.lname;
+        },
+      };
+
+      var jim = {
+        getFirstName: function () {
+          return fname;
+        },
+      };
+
+      // let's extend the three object with Underscore's _extend function
+      _.extend(john, jane, jim);
+
+      console.log(john); // gets all the props from everywhere but person obj
+
+      // how does it work?
+      // check the Underscore's source code
+    </script>
+  </body>
+</html>

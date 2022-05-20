@@ -52,3 +52,10 @@ We know that everything in JavaScript is `Object`, excepts the primitives.
 Let's see in the code.
 
 [Example](./56.js)
+
+## 57. Reflection and Extend
+
+👉 **Reflection**: An object can look at itself, listing and changing its properties and methods. It means JavaScript Object has the ability to look at its own properties and methods. We can use it to implement a very useful pattern called **Extend**.
+
+
+[Example](./57.js)
