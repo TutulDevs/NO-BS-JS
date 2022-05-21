@@ -58,4 +58,4 @@ Let's see in the code.
 👉 **Reflection**: An object can look at itself, listing and changing its properties and methods. It means JavaScript Object has the ability to look at its own properties and methods. We can use it to implement a very useful pattern called **Extend**.
 
 
-[Example](./57.js)
+[Example](./57.html)
