@@ -20,7 +20,7 @@ Let's say we have an object `obj` which has a property, `prop1`. We can get the 
 
 The `obj` object has a prototype object, which has a property, `prop2`. We can get the value of `prop2` by `obj.prop2`. The `obj` finds the `prop2` in its reference and couldn't find it. So it takes a look at its prototype and serves the value.
 
-This prototype can also have its prototype, which has a property, `prop3`. We can get the value of `prop3` by `obj.prop3`. The `obj` finds the `prop2` in its reference and couldn't find it. It takes a look at its prototype and fails to find. So it takes a look at its prototype and serves the value.
+This prototype can also have its prototype, which has a property, `prop3`. We can get the value of `prop3` by `obj.prop3`. The `obj` finds the `prop3` in its reference and couldn't find it. It takes a look at its prototype and fails to find. So it takes a look at its prototype and serves the value.
 
 This chain of prototype after prototype goes on forever until it hits the `base` object. It's called the **Prototype Chain**.
 
@@ -58,3 +58,7 @@ Let's see in the code.
 👉 **Reflection**: An object can look at itself, listing and changing its properties and methods. It means JavaScript Object can look at its properties and methods. We can use it to implement a very useful pattern called **Extend**.
 
 [Example](./57.html)
+
+## Additional Resources
+
+- [Prototype and Prototypal Inheritance in Javascript | Frontend Interview Question](https://www.youtube.com/watch?v=wstwjQ1yqWQ)
