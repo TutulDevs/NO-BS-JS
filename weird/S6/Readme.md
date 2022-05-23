@@ -83,3 +83,6 @@ console.log(a); // true
 ```
 
 [Example](./59.js)
+
+- [FunFunFunction](https://www.youtube.com/watch?v=DqGwxR_0d1M)
+- [JavaScript difference between `__proto__` and `prototype`](https://coderwall.com/p/j1khtg/javascript-difference-between-__proto__-and-prototype)
