@@ -86,3 +86,13 @@ console.log(a); // true
 
 - [FunFunFunction](https://www.youtube.com/watch?v=DqGwxR_0d1M)
 - [JavaScript difference between `__proto__` and `prototype`](https://coderwall.com/p/j1khtg/javascript-difference-between-__proto__-and-prototype)
+
+## 60. Dangerous Aside: 'new' and functions
+
+As it is seen thoroughly in this section's examples, that we are capitalizing the constructor function name. It's not a requirement. If we use small letter we'll still get the same result. But this is the convention. Because we may forget to put the `new` operator before the constructor function's name. JavaScript engine will not throw any error. The function will be executed and since it doesn't return anything, it'll returns `undefined`. And all the added methods via prototype will get a run-time error, because the function returns `undefined` and `undefined` can't have any properties or methods on it. That's why people use this convention to capitalize. You should always follow this convention.
+
+## 61. Conceptual Aside: Built-In Function Constructors
+
+Let's discuss about the built-in function constructor which means these constructors are already there for us to use.
+
+[Example](./61.js)
