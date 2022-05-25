@@ -115,7 +115,7 @@ In the first comparison, the JavaScript engine coerced two values and found they
 
 In the second comparison, the JavaScript engine couldn't coerce the two values. If found _a_ is a primitive and _b_ is an object. So it returned false.
 
-## 63. Dangerous Aside: Arrays and for..in
+## 63. Dangerous Aside: Arrays and `for..in`
 
 Remember **Reflection** and **Extend**? We can see the properties of an object via reflection.
 
@@ -126,3 +126,41 @@ We can view the array by iterating through `for..in`. It has some problems. Don'
 [Example](./63.js)
 
 - [Reflection and Extend](../S5/Readme.md#57-reflection-and-extend)
+
+## 64. `Object.create` and Pure Prototypal Inheritance
+
+We learnt that function constructors were intoduced to mimic other popular programming languages. Other popular programming languages use **classes**, where **class** defines what an object should look like and then you use the `new` keyword to create the object. Function constructors are trying to mimic this way to create an object.
+
+We've another way to create an object that doesn't try to mimic other programming languages. It's called `Object.create()`.
+
+👉 **Polyfill**: Code that adds a feature which the engine _may_ lack.
+
+[Example](./64.js)
+
+- [Object.create() in MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
+
+## 65. ES6 and Classes
+
+ES6 introduced **Classes** in JavaScript. It's nothing but a syntactic sugar for creating object and set the prototype.
+
+```js
+class Person {
+  constructor(fname, lname) {
+    this.fname = fname;
+    this.lname = lname;
+  }
+
+  greet() {
+    return "Hi " + this.fname;
+  }
+}
+
+var john = new Person("John", "Doe");
+```
+
+The `constructor` is doing the work like a constructor function and the `greet()` is a method to the `Person` object. Yes, `Person` is an object. Although it looks like a **class** in other programming languages.
+
+[Example](./65.js)
+
+- [MDN: Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+- [ES6 classes and JavaScript prototypes](https://reinteractive.com/posts/235-es6-classes-and-javascript-prototypes)
