@@ -31,12 +31,21 @@ Number.prototype.isOdd = function () {
 // console.log(5.isOdd()) // error
 // this log throws error because
 // the JS engine didn't convert the number 5 into an object
+// there's a way around for this problem
+console.log((5).isOdd()); // true
+console.log((-50).isOdd()); // false
+
+// the (...) or grouping operator has the highest precedence
+// the JS engine converts the number into an object
 
 // let's try with object
 var numOdd = new Number(5);
 var numEven = new Number(50);
 console.log(numOdd.isOdd()); // true
 console.log(numEven.isOdd()); // false
+
+var numOdd2 = 9;
+console.log(numOdd2.isOdd()); // true
 
 // so be careful what you're doing
 // learn more about the danger of adding methods

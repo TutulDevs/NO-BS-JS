@@ -96,3 +96,33 @@ As it is seen thoroughly in this section's examples, that we are capitalizing th
 Let's discuss about the built-in function constructor which means these constructors are already there for us to use.
 
 [Example](./61.js)
+
+## 62. Dangerous Aside: Built-In Function Constructors
+
+Although adding methods to the built-in function constructor seems cool, it may lead to some unexpected behaviour, mainly with type coercion. Let's see an example.
+
+```js
+var a = 3;
+
+var b = new Number(3);
+
+a == b; // true
+
+a === b; // false
+```
+
+In the first comparison, the JavaScript engine coerced two values and found they are equal.
+
+In the second comparison, the JavaScript engine couldn't coerce the two values. If found _a_ is a primitive and _b_ is an object. So it returned false.
+
+## 63. Dangerous Aside: Arrays and for..in
+
+Remember **Reflection** and **Extend**? We can see the properties of an object via reflection.
+
+We know arrays are objects. We can add prototypes for them too in the `Array` constructor function.
+
+We can view the array by iterating through `for..in`. It has some problems. Don't use this to iterate an array. Try other iterators.
+
+[Example](./63.js)
+
+- [Reflection and Extend](../S5/Readme.md#57-reflection-and-extend)
