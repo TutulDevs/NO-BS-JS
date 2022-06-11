@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .markdown {
+    @apply py-4;
+  }
+
+  .markdown h1 {
+    @apply text-3xl md:text-5xl font-semibold text-main leading-10 mb-6;
+  }
+
+  .markdown p {
+    @apply my-2 text-lg leading-8;
+  }
+
+  .markdown a {
+    @apply font-medium link hover:text-main ease-in duration-300;
+  }
+
+  .markdown ul {
+    @apply ml-4 my-4 list-disc;
+  }
+
+  .markdown ul li {
+    @apply ml-4 my-1;
+  }
+
+  .markdown ul li a {
+    @apply link link-hover;
+  }
+
+  .markdown pre {
+    @apply mockup-code my-4 pl-6;
+  }
+
+  .markdown details {
+    @apply mt-4;
+  }
+
+  .markdown summary {
+    @apply border cursor-pointer justify-start w-full mb-2 py-1 btn btn-sm btn-accent btn-outline text-left ease-in duration-300;
+  }
+}

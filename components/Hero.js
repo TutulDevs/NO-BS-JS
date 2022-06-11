@@ -2,10 +2,10 @@ import React from "react";
 
 export const Hero = () => {
   return (
-    <section className="hero py-4 rounded-lg bg-base-200">
+    <section className="hero my-8 py-4 rounded-lg bg-base-200">
       <div className="hero-content text-center">
         <div className="max-w-xl">
-          <h1 className="text-4xl md:text-6xl font-bold uppercase text-[#7acb53] tracking-wide">
+          <h1 className="text-4xl md:text-6xl font-bold uppercase text-main tracking-wide">
             no-bs-js
           </h1>
 
@@ -30,7 +30,7 @@ export const Hero = () => {
             href="https://github.com/TutulDevs/NO-BS-JS"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 btn btn-outline btn-primary btn-md"
+            className="mt-4 btn btn-primary btn-md"
           >
             GitHub Repository
           </a>
